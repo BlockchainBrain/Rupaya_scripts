@@ -16,7 +16,8 @@ echo " It will not use the "-resync" option. If you need that you should do it m
 echo ""
 echo " VERY IMPORTANT:"
 echo " If your Rupaya binaries (rupayad, rupaya-cli) are not in the directory /usr/local/bin"
-echo " then you must edit the line "PATH_TO_BINARIES=/root" to the correct directory; otherwise this script will NOT work."
+echo " then you must edit and update the line "PATH_TO_BINARIES=/usr/local/bin" to the point to the correct directory;"
+echo " otherwise this script will NOT work."
 echo " For example: PATH_TO_BINARIES=/usr/bin"
 echo " PATH_TO_BINARIES=/root"
 echo " PATH_TO_BINARIES=/root/rupx-5.1.1/src"
@@ -29,7 +30,7 @@ echo ""
 echo ""
 echo ""
 
-PATH_TO_BINARIES=/root
+PATH_TO_BINARIES=/usr/local/bin
 
 read -n 1 -s -r -p "Press any key to continue or Ctrl-c to interrupt here"
 
