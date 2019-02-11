@@ -2,7 +2,7 @@
 
 echo ""
 echo " Rupaya daemon check and restart script:"
-echo " This script will check for the rupayad daemon every 60 seconds
+echo " This script will check for the rupayad daemon every 60 seconds."
 echo " If the daemon is not running, then this script will start it."
 echo " The script will also log the restart in the file /root/rupaya-crashes.log"
 echo ""
