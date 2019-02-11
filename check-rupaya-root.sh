@@ -1,37 +1,29 @@
 #!/bin/bash
 
 echo ""
-echo "      ****** WARNING ******"
+echo " Rupaya daemon check and restart script:"
+echo " This script will check for the rupayad daemon every 60 seconds
+echo " If the daemon is not running, then this script will start it."
+echo " The script will also log the restart in the file /root/rupaya-crashes.log"
 echo ""
-echo " This is a bash script. A malicious or wrongly coded script may do really nasty things to your system."
-echo " Never ever run any script unless you either fully understand all its lines or it has been"
-echo " validated by somebody you trust."
-echo ""
-echo " It will check every 60 seconds if rupayad process exist and if not, it will start it again."
-echo " If rupayad process does not exist it will log it in /root/rupaya-crashes.log"
-echo " You could edit it to change the frequency it checks that and where it stores the log file"
-echo " It is and endless loop: ir will run forever, but you can stop it running the command:"
-echo " killall check-rupaya-root.sh"
-echo " It will not use the "-resync" option. If you need that you should do it manually"
+echo " The script runs in an endless loop."
 echo ""
 echo " VERY IMPORTANT:"
-echo " Unless your Rupaya binaries are in /usr/local/bin you must edit the line "PATH_TO_BINARIES=/usr/local/bin" to the"
-echo " directory where you store them; otherwise it will NOT work."
+echo " Unless your Rupaya binaries, (rupayad, rupaya-cli) are in the directory /usr/local/bin "
+echo " then you must edit and update the line "PATH_TO_BINARIES=/usr/local/bin" to the"
+echo " directory where you store them; otherwise the script will NOT work."
 echo " For example: PATH_TO_BINARIES=/usr/bin"
-echo "              PATH_TO_BINARIES=/usr/local/bin"
+echo "              PATH_TO_BINARIES=/root"
 echo "              PATH_TO_BINARIES=/root/rupx-5.1.1/src"
 echo " The line you must edit is the first one after the group of lines starting with "echo""
 echo ""
-echo " You must also grant execution permission to this script with the command "chmod +x check-rupaya-root.sh""
+echo " You must run the following command "chmod +x check-rupaya-root.sh""
+echo " The above command will grant execution permission to be able to run script."
 echo ""
 echo ""
 echo ""
-echo ""
-
-
 
 PATH_TO_BINARIES=/usr/local/bin
-
 
 read -n 1 -s -r -p "Press any key to continue or Ctrl-c to interrupt here"
 
