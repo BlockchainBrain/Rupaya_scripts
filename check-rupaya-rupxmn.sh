@@ -11,7 +11,7 @@ echo " It will check every 60 seconds if rupayad process exist and if not, it wi
 echo " If rupayad process does not exist it will log it in /root/rupaya-crashes.log"
 echo " You could edit it to change the frequency it checks that and where it stores the log file"
 echo " It is and endless loop: ir will run forever, but you can stop it running the command:"
-echo " killall check-rupaya.sh"
+echo " killall check-rupaya-rupxmn.sh"
 echo " It will not use the "-resync" option. If you need that you should do it manually"
 echo ""
 echo " VERY IMPORTANT:"
