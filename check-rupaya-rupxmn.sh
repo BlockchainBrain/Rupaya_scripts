@@ -43,7 +43,7 @@ while true
         ps aux|grep rupayad|grep -v grep >/dev/null
         if [ $? != 0 ]
             then
-                $PATH_TO_BINARIES/rupayad
+                $PATH_TO_BINARIES/rupayad -daemon
                 # Log the problem in /root/rupaya-crashes.log. A more tidy place for a linux system would be in /var/log instead of /root.
                 # Change it if you want.
                 date >>/home/rupxmn/rupaya-crashes.log
