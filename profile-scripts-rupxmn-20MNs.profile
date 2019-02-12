@@ -2704,9 +2704,9 @@ rm20core(){
 #
 #Rupaya Scripted Commands Cheat Sheet
 list(){
-	echo **Rupaya Scripted Commands Cheat Sheet**
+	echo ${bold}Rupaya Scripted Commands Cheat Sheet${normal}
 	echo ""
-	echo **Wallet Commands to start/stop the wallet and verify the wallet/MN are running**
+	echo ${bold}Wallet Commands to start/stop the wallet and verify the wallet/MN are running${normal}
 	echo ""
 	echo ${bold}bc${normal} - Check the Block Count
 	echo ${bold}bc1${normal} - Check the Block Count of MN1
@@ -2725,7 +2725,7 @@ list(){
 	echo ""
 	echo **Commands to view/edit/remove/resync the folders and config files**
 	echo ""
-	echo ${bold}backupall${normal} - Backup the rupaya.conf file for all MN's
+	echo ${bold}backupall${normal} - Backup the rupaya.conf file for all MNs
 	echo ${bold}backup1${normal} - Backup the rupaya.conf file
 	echo ${bold}cat1${normal} - Display the contents of the MN1 configuration file /home/rupxmn/.rupayacore/rupaya.conf${normal}
 	echo ${bold}clearpeers${normal} - Deletes the peers.dat files and restarts the daemons.
