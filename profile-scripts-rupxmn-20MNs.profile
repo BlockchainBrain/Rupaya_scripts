@@ -2723,7 +2723,7 @@ list(){
 	echo ${bold}stop1${normal} -  Stop the MN1 Rupaya Daemon
 	echo ${bold}stopall${normal} - Stop all Rupaya MN Daemons
 	echo ""
-	echo **Commands to view/edit/remove/resync the folders and config files**
+	echo ${bold}Commands to view/edit/remove/resync the folders and config files${normal}
 	echo ""
 	echo ${bold}backupall${normal} - Backup the rupaya.conf file for all MNs
 	echo ${bold}backup1${normal} - Backup the rupaya.conf file
