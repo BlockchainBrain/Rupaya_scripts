@@ -18,15 +18,15 @@ wget https://raw.githubusercontent.com/BlockchainBrain/Rupaya_scripts/master/pro
 wait
 sudo rm /home/rupxmn/.profile >/dev/null
 sudo mv profile-scripts-rupxmn-20MNs.profile /home/rupxmn/.profile
-echo "Running the command: source /home/rupxmn/.profile"
-echo "You will need to run this command again after you update the vars.bash file with your TXHashes"
-wait
-source ~/.profile
+echo ""
 echo "The profile script download is complete"
 echo "Run the following command to edit the varsh.bash file so you can add in your TXHashes:"
 echo "The TXHash for each MN can be found in the masternode.conf file on the PC running the Cold Wallet."
 echo "nano /home/rupxmn/vars.bash"
 echo ""
 echo "To get a list of commands that you can now run, enter the command: list"
+echo ""
+echo "You must run the following command to enable the profile scripts:"
+echo "source /home/rupxmn/.profile"
 echo ""
 }
