@@ -16,7 +16,7 @@ echo Downloading the file named profile-scripts-rupxmn-20MNs.profile and overwri
 wget https://raw.githubusercontent.com/BlockchainBrain/Rupaya_scripts/master/profile-scripts-rupxmn-20MNs.profile >/dev/null
 wait
 sudo rm /home/rupxmn/.profile >/dev/null
-sudo cp profile-scripts-rupxmn-20MNs.profile /home/rupxmn/.profile
+sudo mv profile-scripts-rupxmn-20MNs.profile /home/rupxmn/.profile
 echo Running the command: source /home/rupxmn/.profile
 echo You will need to run this command again after you update the vars.bash file with your TXHashes
 source /home/rupxmn/.profile
