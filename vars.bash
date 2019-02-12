@@ -1,4 +1,6 @@
-#This file will be used to store all of the IP address and TXHash variables that are used in the profile scripts
+#This file will be used to store all of the TXHash variables that are used in the profile scripts
+#The TXHash for each MN can be found in the masternode.conf file on the PC running the Cold Wallet.
+#The logall and log1 commands will not work unless this information is filled in correctly.
 #This file will be stored in /home/rupxmn/vars.bash
 #Transaction Hashes
 H1=
@@ -42,46 +44,3 @@ export H17
 export H18
 export H19
 export H20
-
-#MN IP Addresses
-IP1=
-IP2=
-IP3=
-IP4=
-IP5=
-IP6=
-IP7=
-IP8=
-IP9=
-IP10=
-IP11=
-IP12=
-IP13=
-IP14=
-IP15=
-IP16=
-IP17=
-IP18=
-IP19=
-IP20=
-
-export IP1
-export IP2
-export IP3
-export IP4
-export IP5
-export IP6
-export IP7
-export IP8
-export IP9
-export IP10
-export IP11
-export IP12
-export IP13
-export IP14
-export IP15
-export IP16
-export IP17
-export IP18
-export IP19
-export IP20
