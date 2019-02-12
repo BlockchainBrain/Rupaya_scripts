@@ -27,10 +27,10 @@ echo "NOTE: The TXHash for each MN can be found in the masternode.conf file on t
 echo "and the logall and log1 commands will not work unless the vars.bash file is filled in with the correct TXHash for each MN."
 echo "${bold}nano /home/rupxmn/vars.bash${normal}"
 echo ""
-echo "To view a list of the commands that you can now run, enter the command:"
-echo "${bold}list${normal}"
-echo ""
 echo "You must run the following command to enable the profile scripts:"
 echo "${bold}source /home/rupxmn/.profile${normal}"
+echo ""
+echo "To view a list of the commands that you can now run, enter the command:"
+echo "${bold}list${normal}"
 echo ""
 }
