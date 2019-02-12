@@ -2709,11 +2709,14 @@ list(){
 	echo **Wallet Commands to start/stop the wallet and verify the wallet/MN are running**
 	echo ""
 	echo ${bold}bc${normal} - Check the Block Count
+	echo ${bold}bc1${normal} - Check the Block Count of MN1
 	echo ${bold}checkall${normal} - Run all of the "Check" commands for all MNs	
 	echo ${bold}log1${normal} - Search MN1 debug.log for the TXHASH
 	echo ${bold}logall${normal} - Search all MNs debug.log for the TXHASH
-	echo ${bold}mnstatus${normal} - Check the MN Status	
+	echo ${bold}mnstatus${normal} - Check the MN Status
+	echo ${bold}mnstatus1${normal} - Check the MN Status of MN1
 	echo ${bold}rinfo${normal} - Check the wallet version, block count, connections, and IP
+	echo ${bold}rinfo1${normal} - Check the wallet version, block count, and active connections of MN1
 	echo ${bold}rps${normal} - Verify if the Rupaya Daemon is running
 	echo ${bold}start1${normal} -  Start the MN1 Rupaya Daemon
 	echo ${bold}startall${normal} - Start all Rupaya MN Daemons
@@ -2722,6 +2725,7 @@ list(){
 	echo ""
 	echo **Commands to view/edit/remove/resync the folders and config files**
 	echo ""
+	echo ${bold}backupall${normal} - Backup the rupaya.conf file for all MN's
 	echo ${bold}backup1${normal} - Backup the rupaya.conf file
 	echo ${bold}cat1${normal} - Display the contents of the MN1 configuration file /home/rupxmn/.rupayacore/rupaya.conf${normal}
 	echo ${bold}clearpeers${normal} - Deletes the peers.dat files and restarts the daemons.
