@@ -79,7 +79,7 @@ hotcold(){
 #MN1 - Searching MN1 debug.log for the TXHASH
 log1(){
 	echo Searching MN1 debug.log for the TXHASH
-	cat /home/rupxmn/.rupayacore/debug.log | grep -a $H1 | tail -5
+	cat /root/.rupayacore/debug.log | grep -a $H1 | tail -5
 }
 #---------------------------------------------------------
 #
@@ -105,7 +105,7 @@ clearpeers(){
 	sleep 2
 	echo ---------------------------------------------------------
 	echo Deleting all of the peers.dat files and restarting the Rupaya Daemon
-	printf "rupxmn deleted" rm /home/rupxmn/.rupayacore/peers.dat && sleep 2 && echo  
+	printf "peers.dat deleted" rm /root/.rupayacore/peers.dat && sleep 2 && echo  
 	echo ---------------------------------------------------------
 	#Starting the daemon
 	start1
@@ -194,17 +194,17 @@ list(){
 	echo ${bold}Commands to view/edit/remove/resync the folders and config files${normal}
 	echo ""
 	echo ${bold}backup1${normal} - Backup the rupaya.conf file
-	echo ${bold}cat1${normal} - Display the contents of the MN1 configuration file /home/rupxmn/.rupayacore/rupaya.conf${normal}
+	echo ${bold}cat1${normal} - Display the contents of the MN1 configuration file /root/.rupayacore/rupaya.conf${normal}
 	echo ${bold}clearpeers${normal} - Deletes the peers.dat files and restarts the daemons.
 	echo "             "Run this every 2 months to clear out the peers.dat file
-	echo ${bold}edit1${normal} - EDIT the contents of the MN1 configuration file ${bold}/home/rupxmn/.rupayacore/rupaya.conf${normal}
-	echo ${bold}ls1${normal} - Display the contents of the MN1 directory ${bold}/home/rupxmn/${normal}
-	echo ${bold}ls1core${normal} - Display the contents of MN1 directory ${bold}/home/rupxmn/.rupayacore${normal}
+	echo ${bold}edit1${normal} - EDIT the contents of the MN1 configuration file ${bold}/root/.rupayacore/rupaya.conf${normal}
+	echo ${bold}ls1${normal} - Display the contents of the MN1 directory ${bold}/root/${normal}
+	echo ${bold}ls1core${normal} - Display the contents of MN1 directory ${bold}/root/.rupayacore${normal}
 	echo ${bold}recreate1${normal} - Back up the rupaya.conf file and delete the .rupayacore directory
 	echo ${bold}restore1${normal} - Restore the rupaya.conf file
 	echo ${bold}resync1${normal} - Resync the MN1 rupxmn wallet
-	echo ${bold}rm1conf${normal} - Delete the MN1 configuration file ${bold}/home/rupxmn/.rupayacore/rupaya.conf${normal}
-	echo ${bold}rm1core${normal} - Delete the entire MN1 directory ${bold}/home/rupxmn/.rupayacore${normal}
+	echo ${bold}rm1conf${normal} - Delete the MN1 configuration file ${bold}/root/.rupayacore/rupaya.conf${normal}
+	echo ${bold}rm1core${normal} - Delete the entire MN1 directory ${bold}/root/.rupayacore${normal}
 	echo ""
 	echo ""
 }
