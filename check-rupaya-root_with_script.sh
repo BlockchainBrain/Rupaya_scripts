@@ -9,15 +9,6 @@ echo " The script runs in an endless loop."
 echo ""
 echo " A big thank you to @Respio (aka Fibroblasto) for creating the script and sharing it with the community."
 echo ""
-echo " VERY IMPORTANT:"
-echo " Unless your Rupaya binaries, (rupayad, rupaya-cli) are in the directory /usr/local/bin "
-echo " then you must edit and update the line "PATH_TO_BINARIES=/usr/local/bin" to the"
-echo " directory where you store them; otherwise the script will NOT work."
-echo " For example: PATH_TO_BINARIES=/usr/bin"
-echo "              PATH_TO_BINARIES=/root"
-echo "              PATH_TO_BINARIES=/root/rupx-5.1.1/src"
-echo " The line you must edit is the first one after the group of lines starting with "echo""
-echo ""
 echo " You must run the following command, before running the script:"
 echo " chmod +x check-rupaya-root_with_script.sh"
 echo ""
@@ -25,8 +16,6 @@ echo " To stop the script, run the following command:"
 echo " pkill bash"
 echo ""
 echo ""
-
-PATH_TO_BINARIES=/usr/local/bin
 
 read -n 1 -s -r -p "Press any key to continue or Ctrl-c to interrupt here"
 
@@ -39,7 +28,7 @@ while true
         ps aux|grep rupayad|grep -v grep >/dev/null
         if [ $? != 0 ]
             then   
-                $PATH_TO_BINARIES/systemctl start Rupaya.service
+                systemctl start Rupaya.service
 
                 # Log the problem in /root/rupaya-crashes.log. A more tidy place for a linux system
                 # would be in /var/log instead of /root. Change it if you want.
