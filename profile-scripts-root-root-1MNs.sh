@@ -33,3 +33,4 @@ echo ""
 echo "To view a list of the commands that you can now run, enter the command:"
 echo "${bold}list${normal}"
 echo ""
+}
