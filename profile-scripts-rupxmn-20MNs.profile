@@ -29,7 +29,7 @@ normal=$(tput sgr0)
 #
 #Getinfo - All
 rinfo(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn " && sudo runuser -l rupxmn -c 'rupaya-cli getinfo'
 	for i in {2..20}; do
                 sudo printf "rupxmn$i " && sudo runuser -l rupxmn$i -c 'rupaya-cli getinfo'
