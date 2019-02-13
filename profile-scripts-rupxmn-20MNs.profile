@@ -37,102 +37,102 @@ rinfo(){
 }
 #Getinfo - MN1
 rinfo1(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn " && sudo runuser -l rupxmn -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN2
 rinfo2(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn2 " && sudo runuser -l rupxmn2 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN3
 rinfo3(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn3 " && sudo runuser -l rupxmn3 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN4
 rinfo4(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn4 " && sudo runuser -l rupxmn4 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN5
 rinfo5(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn5 " && sudo runuser -l rupxmn5 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN6
 rinfo6(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn6 " && sudo runuser -l rupxmn6 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN7
 rinfo7(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn7 " && sudo runuser -l rupxmn7 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN8
 rinfo8(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn8 " && sudo runuser -l rupxmn8 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN9
 rinfo9(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn9 " && sudo runuser -l rupxmn9 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN10
 rinfo10(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn10 " && sudo runuser -l rupxmn10 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN11
 rinfo11(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn11 " && sudo runuser -l rupxmn11 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN12
 rinfo12(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn12 " && sudo runuser -l rupxmn12 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN13
 rinfo13(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn13 " && sudo runuser -l rupxmn13 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN14
 rinfo14(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn14 " && sudo runuser -l rupxmn14 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN15
 rinfo15(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn15 " && sudo runuser -l rupxmn15 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN16
 rinfo16(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn16 " && sudo runuser -l rupxmn16 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN17
 rinfo17(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn17 " && sudo runuser -l rupxmn17 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN18
 rinfo18(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn18 " && sudo runuser -l rupxmn18 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN19
 rinfo19(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn19 " && sudo runuser -l rupxmn19 -c 'rupaya-cli getinfo'
 }
 #Getinfo - MN20
 rinfo20(){
-        echo Checking the Rupaya wallet version, block count, connections, and IP
+        echo Checking the Rupaya wallet version, block count, and connections
                 sudo printf "rupxmn20 " && sudo runuser -l rupxmn20 -c 'rupaya-cli getinfo'
 }
 #---------------------------------------------------------
