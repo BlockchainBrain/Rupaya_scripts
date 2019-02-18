@@ -1,0 +1,31 @@
+COMMANDS="rps rinfo"
+
+rpcli(){
+	echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c 'rupaya-cli $2'
+}
+
+rinfo(){
+        echo Checking the Rupaya wallet version, block count, and connections
+		rpcli $1 $2
+        #echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c 'rupaya-cli getinfo'
+}
+
+rps(){
+	echo Checking to see if the Rupaya Daemon is running
+	ps -ef | grep rupaya
+}
+
+bc(){
+	echo Checking the Block Count
+		echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c 'rupaya-cli getblockcount'
+	for i in {2..20}; do
+                sudo printf "rupxmn$i " && sudo runuser -l rupxmn$i -c 'rupaya-cli getblockcount'
+        done
+}
+
+for c in $COMMANDS; do
+        if [ "$1" == "$c" ]; then
+                $@
+                break
+        fi
+done
