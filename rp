@@ -1,13 +1,27 @@
+WALLETS=6
+
 COMMANDS="rps rinfo"
 
+all_or_one(){
+	if [ "$1" == "all" ]; then
+		# for i in ${1..$WALLETS}; do
+	else
+		$@
+	fi
+}
+
 rpcli(){
-	echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "rupaya-cli $2"
+	if [ "$1" == "all" ]; then
+		for i in $(seq 1 $WALLETS); do
+			echo "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "rupaya-cli $2"
+		done
+	else
+		echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "rupaya-cli $2"
 }
 
 rinfo(){
-        echo Checking the Rupaya wallet version, block count, and connections
-		rpcli $1 getinfo
-        #echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c 'rupaya-cli getinfo'
+	echo Checking the Rupaya wallet version, block count, and connections
+	rpcli $1 getinfo
 }
 
 rps(){
@@ -17,10 +31,11 @@ rps(){
 
 bc(){
 	echo Checking the Block Count
-		echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c 'rupaya-cli getblockcount'
-	for i in {2..20}; do
-                sudo printf "rupxmn$i " && sudo runuser -l rupxmn$i -c 'rupaya-cli getblockcount'
-        done
+	rpcli $1 getblockcount
+	# echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c 'rupaya-cli getblockcount'
+	# for i in {2..20}; do
+		# sudo printf "rupxmn$i " && sudo runuser -l rupxmn$i -c 'rupaya-cli getblockcount'
+	# done
 }
 
 for c in $COMMANDS; do
