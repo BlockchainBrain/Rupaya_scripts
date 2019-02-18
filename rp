@@ -1,7 +1,7 @@
 COMMANDS="rps rinfo"
 
 rpcli(){
-	echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c 'rupaya-cli $2'
+	echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "rupaya-cli $2"
 }
 
 rinfo(){
