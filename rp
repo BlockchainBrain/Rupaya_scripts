@@ -2,13 +2,13 @@ WALLETS=6
 
 COMMANDS="rps rinfo"
 
-all_or_one(){
-	if [ "$1" == "all" ]; then
-		# for i in ${1..$WALLETS}; do
-	else
-		$@
-	fi
-}
+#all_or_one(){
+#	if [ "$1" == "all" ]; then
+#		# for i in ${1..$WALLETS}; do
+#	else
+#		$@
+#	fi
+#}
 
 rpcli(){
 	if [ "$1" == "all" ]; then
@@ -17,6 +17,7 @@ rpcli(){
 		done
 	else
 		echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "rupaya-cli $2"
+	fi
 }
 
 rinfo(){
