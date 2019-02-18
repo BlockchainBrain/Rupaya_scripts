@@ -38,6 +38,10 @@ bc(){
         echo Checking the Block Count
         rupaya-cli getblockcount
 }
+bc1(){
+        echo Checking the Block Count
+        rupaya-cli getblockcount
+}
 #---------------------------------------------------------
 #
 #MN Count
