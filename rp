@@ -6,7 +6,7 @@ rpcli(){
 
 rinfo(){
         echo Checking the Rupaya wallet version, block count, and connections
-		rpcli $1 $2
+		rpcli $1 getinfo
         #echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c 'rupaya-cli getinfo'
 }
 
