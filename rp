@@ -1,6 +1,5 @@
 WALLETS=6
 
-COMMANDS="rinfo rps start resync"
 
 # first arg: number or all
 # second arg: command to run
@@ -47,6 +46,12 @@ bc(){
 	echo Checking the Block Count
 	rpcli $1 getblockcount
 }
+
+mnstatus(){
+	rpcli $1 "masternode status"
+}
+
+COMMANDS="bc rinfo rps start stop resync mnstatus"
 
 for c in $COMMANDS; do
 	if [ "$1" == "$c" ]; then
