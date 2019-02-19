@@ -2,6 +2,8 @@ WALLETS=6
 
 COMMANDS="rinfo rps start resync"
 
+# first arg: number or all
+# second arg: command to run
 run_as_rupxmn(){
 	if [ "$1" == "all" ]; then
 		echo "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
