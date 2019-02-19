@@ -4,7 +4,8 @@ COMMANDS="rinfo rps start resync"
 
 run_as_rupxmn(){
 	if [ "$1" == "all" ]; then
-		for i in $(seq 1 $WALLETS); do
+		echo "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
+		for i in $(seq 2 $WALLETS); do
 			echo "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "$2"
 		done
 	else
