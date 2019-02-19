@@ -1,23 +1,29 @@
 WALLETS=6
 
-
 # first arg: number or all
-# second arg: command to run
-run_as_rupxmn(){
+# second arg: function to run which should a number or nothing as its first argument
+exec_function_for_all_or_one(){
 	if [ "$1" == "all" ]; then
-		echo "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
+		$2
 		for i in $(seq 2 $WALLETS); do
-			echo "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "$2"
+			$2 $i
 		done
 	elif [[ "$1" =~ ^[0-9]*$ ]]; then # check if $1 is an integer or nothing
-		echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "$2"
+		$2 $1
 	else
 		echo 'Expected a number or "all" after command name to indicate wallet(s)'
 	fi
 }
 
+run_as_rupxmn(){
+	echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "$2"
+}
+
 rpcli(){
-	run_as_rupxmn $1 "rupaya-cli $2"
+	cli_func(){
+		run_as_rupxmn $1 "rupaya-cli $2"
+	}
+	exec_function_for_all_or_one $1 cli_func
 }
 
 rinfo(){
@@ -26,7 +32,10 @@ rinfo(){
 }
 
 start(){
-	run_as_rupxmn $1 "rupayad -daemon"
+	start_func(){
+		run_as_rupxmn $1 "rupayad -daemon"
+	}
+	exec_function_for_all_or_one $1 start_func
 }
 
 stop() {
@@ -34,7 +43,10 @@ stop() {
 }
 
 resync(){
-	run_as_rupxmn $1 "rupayad -daemon -resync"
+	resync_func(){
+		run_as_rupxmn "rupayad -daemon -resync"
+	}
+	exec_function_for_all_or_one $1 resync_func
 }
 
 rps(){
