@@ -25,6 +25,10 @@ start(){
 	run_as_rupxmn $1 "rupayad -daemon"
 }
 
+stop() {
+	rpcli $1 stop
+}
+
 resync(){
 	run_as_rupxmn $1 "rupayad -daemon -resync"
 }
