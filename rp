@@ -47,8 +47,8 @@ bc(){
 }
 
 for c in $COMMANDS; do
-        if [ "$1" == "$c" ]; then
-                $@
-                break
-        fi
+	if [ "$1" == "$c" ]; then
+		$@
+		break
+	fi
 done
