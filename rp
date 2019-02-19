@@ -8,8 +8,10 @@ run_as_rupxmn(){
 		for i in $(seq 2 $WALLETS); do
 			echo "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "$2"
 		done
-	else
+	elif [[ "$1" =~ ^[0-9]*$ ]]; then # check if $1 is an integer or nothing
 		echo "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "$2"
+	else
+		echo 'Expected a number or "all" after command name to indicate wallet(s)'
 	fi
 }
 
