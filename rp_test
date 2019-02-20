@@ -4,27 +4,23 @@ WALLETS=6
 # first arg: number or all
 # second arg: command to run
 run_as_rupxmn(){
-    if [ "$2" == "rps" ]; then
-        printf "$2" # run the rps method and print results to screen
-    else
-        if [ "$1" == "all" ]; then
-            printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
-            for i in $(seq 2 $WALLETS); do
-                if [ "$1" -eq 1 ]; then
-                    printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
-                else
-                    printf "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "$2"
-                fi
-            done
-        elif [[ "$1" =~ ^[0-9]*$ ]]; then # check if $1 is an integer or nothing
-            if [ "$1" -eq 1 ]; then
+    if [ "$1" == "all" ]; then
+        printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
+        for i in $(seq 2 $WALLETS); do
+            if [ $i -eq 1 ]; then
                 printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
             else
-                printf "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "$2"
+                printf "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "$2"
             fi
+        done
+    elif [[ "$1" =~ ^[0-9]*$ ]]; then # check if $1 is an integer or nothing
+        if [ $1 -eq 1 ]; then
+            printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
         else
-            echo 'Expected a number or "all" after command name to indicate wallet(s)'
+            printf "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "$2"
         fi
+    else
+        echo 'Expected a number or "all" after command name to indicate wallet(s)'
     fi
 }
 
