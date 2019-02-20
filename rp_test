@@ -50,6 +50,10 @@ start(){
 	run_as_rupxmn $1 "rupayad -daemon"
 }
 
+testnet(){
+	run_as_rupxmn $1 "rupayad -daemon -testnet"
+}
+
 stop() {
 	rpcli $1 stop
 }
@@ -80,7 +84,7 @@ hotcold(){
 	cat_debuglog $1 | grep HotCold
 }
 
-COMMANDS="bc info rps start stop resync status count hotcold"
+COMMANDS="bc info rps start stop resync status count hotcold testnet"
 
 for c in $COMMANDS; do
 	if [ "$1" == "$c" ]; then
@@ -88,3 +92,17 @@ for c in $COMMANDS; do
 		break
 	fi
 done
+
+#Things to add:
+	# log1 - logall
+	# catlog
+	# clearpeers
+	# recreate
+	# replicate
+	# resync
+	# backup
+	# restore
+	# genkey
+	# all the view/edit/remove commands (ls1, lscore, cat1, edit1, rm1conf, rm1core)
+	# addusers
+	#list
