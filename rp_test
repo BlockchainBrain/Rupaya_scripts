@@ -7,7 +7,7 @@ run_as_rupxmn(){
     if [ "$1" == "all" ]; then
         printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
         for i in $(seq 2 $WALLETS); do
-            if [ $1 -eq 1 ]; then
+            if [ $i -eq 1 ]; then
                 printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
             else
                 printf "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "$2"
