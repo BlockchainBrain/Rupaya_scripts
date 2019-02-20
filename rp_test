@@ -70,6 +70,7 @@ count(){
 
 hotcold(){
 	cat_debuglog $1 | grep HotCold
+}
 
 COMMANDS="bc info ps start stop resync status count hotcold"
 
