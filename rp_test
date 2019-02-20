@@ -58,7 +58,7 @@ resync(){
 	run_as_rupxmn $1 "rupayad -daemon -resync"
 }
 
-ps(){
+rps(){
 	echo Checking to see if the Rupaya Daemon is running
 	ps -ef | grep rupayad
 }
@@ -80,7 +80,7 @@ hotcold(){
 	cat_debuglog $1 | grep HotCold
 }
 
-COMMANDS="bc info ps start stop resync status count hotcold"
+COMMANDS="bc info rps start stop resync status count hotcold"
 
 for c in $COMMANDS; do
 	if [ "$1" == "$c" ]; then
