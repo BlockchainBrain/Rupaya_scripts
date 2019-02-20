@@ -20,7 +20,7 @@ rpcli(){
 	run_as_rupxmn $1 "rupaya-cli $2"
 }
 
-rinfo(){
+info(){
 	echo Checking the Rupaya wallet version, block count, and connections
 	rpcli $1 getinfo
 }
@@ -37,7 +37,7 @@ resync(){
 	run_as_rupxmn $1 "rupayad -daemon -resync"
 }
 
-rps(){
+ps(){
 	echo Checking to see if the Rupaya Daemon is running
 	ps -ef | grep rupaya
 }
@@ -47,11 +47,15 @@ bc(){
 	rpcli $1 getblockcount
 }
 
-mnstatus(){
+status(){
 	rpcli $1 "masternode status"
 }
 
-COMMANDS="bc rinfo rps start stop resync mnstatus"
+count(){
+	rpcli $1 "masternode count"
+}
+
+COMMANDS="bc info ps start stop resync status count"
 
 for c in $COMMANDS; do
 	if [ "$1" == "$c" ]; then
