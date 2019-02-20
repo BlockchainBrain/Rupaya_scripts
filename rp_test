@@ -7,14 +7,14 @@ run_as_rupxmn(){
     if [ "$1" == "all" ]; then
         printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
         for i in $(seq 2 $WALLETS); do
-            if [ "$1" -eq 1]; then
+            if [ "$1" -eq 1 ]; then
                 printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
             else
                 printf "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "$2"
             fi
         done
     elif [[ "$1" =~ ^[0-9]*$ ]]; then # check if $1 is an integer or nothing
-        if [ "$1" -eq 1]; then
+        if [ "$1" -eq 1 ]; then
             printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
         else
             printf "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "$2"
