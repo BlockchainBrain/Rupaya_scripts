@@ -466,7 +466,7 @@ testnet9(){
 #
 #Start the Rupaya MN10 Daemon in the Testnet
 testnet10(){
-        echo Starting the Rupaya MN6 Daemon
+        echo Starting the Rupaya MN10 Daemon
 	printf "rupxmn10 " && sudo runuser -l rupxmn10 -c 'rupayad -daemon -testnet' && sleep 2
 }
 #Start the Rupaya MN11 Daemon in the Testnet
