@@ -60,7 +60,7 @@ resync(){
 
 ps(){
 	echo Checking to see if the Rupaya Daemon is running
-	ps -ef | grep rupaya
+	ps -ef | grep rupayad
 }
 
 bc(){

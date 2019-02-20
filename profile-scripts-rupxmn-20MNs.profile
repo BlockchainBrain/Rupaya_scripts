@@ -410,6 +410,152 @@ startall(){
 }
 #---------------------------------------------------------
 #
+#Start the Rupaya MN1 Daemon in the Testnet
+testnet1(){
+        echo Starting the Rupaya MN1 Daemon
+	printf "rupxmn " && sudo runuser -l rupxmn -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN2 Daemon in the Testnet
+testnet2(){
+        echo Starting the Rupaya MN2 Daemon
+	printf "rupxmn2 " && sudo runuser -l rupxmn2 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN3 Daemon in the Testnet
+testnet3(){
+        echo Starting the Rupaya MN3 Daemon
+	printf "rupxmn3 " && sudo runuser -l rupxmn3 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN4 Daemon in the Testnet
+testnet4(){
+        echo Starting the Rupaya MN4 Daemon
+	printf "rupxmn4 " && sudo runuser -l rupxmn4 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN5 Daemon in the Testnet
+testnet5(){
+        echo Starting the Rupaya MN5 Daemon
+	printf "rupxmn5 " && sudo runuser -l rupxmn5 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN6 Daemon in the Testnet
+testnet6(){
+        echo Starting the Rupaya MN6 Daemon
+	printf "rupxmn6 " && sudo runuser -l rupxmn6 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN7 Daemon in the Testnet
+testnet7(){
+        echo Starting the Rupaya MN7 Daemon
+	printf "rupxmn7 " && sudo runuser -l rupxmn7 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN8 Daemon in the Testnet
+testnet8(){
+        echo Starting the Rupaya MN8 Daemon
+	printf "rupxmn8 " && sudo runuser -l rupxmn8 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN6 Daemon in the Testnet
+testnet9(){
+        echo Starting the Rupaya MN9 Daemon
+	printf "rupxmn9 " && sudo runuser -l rupxmn9 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN10 Daemon in the Testnet
+testnet10(){
+        echo Starting the Rupaya MN6 Daemon
+	printf "rupxmn10 " && sudo runuser -l rupxmn10 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#Start the Rupaya MN11 Daemon in the Testnet
+testnet11(){
+        echo Starting the Rupaya MN11 Daemon
+	printf "rupxmn11 " && sudo runuser -l rupxmn11 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN12 Daemon in the Testnet
+testnet12(){
+        echo Starting the Rupaya MN12 Daemon
+	printf "rupxmn12 " && sudo runuser -l rupxmn12 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN13 Daemon in the Testnet
+testnet13(){
+        echo Starting the Rupaya MN13 Daemon
+	printf "rupxmn13 " && sudo runuser -l rupxmn13 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN14 Daemon in the Testnet
+testnet14(){
+        echo Starting the Rupaya MN14 Daemon
+	printf "rupxmn14 " && sudo runuser -l rupxmn14 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN15 Daemon in the Testnet
+testnet15(){
+        echo Starting the Rupaya MN15 Daemon
+	printf "rupxmn15 " && sudo runuser -l rupxmn15 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN16 Daemon in the Testnet
+testnet16(){
+        echo Starting the Rupaya MN16 Daemon
+	printf "rupxmn16 " && sudo runuser -l rupxmn16 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN17 Daemon in the Testnet
+testnet17(){
+        echo Starting the Rupaya MN17 Daemon
+	printf "rupxmn17 " && sudo runuser -l rupxmn17 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN18 Daemon in the Testnet
+testnet18(){
+        echo Starting the Rupaya MN18 Daemon
+	printf "rupxmn18 " && sudo runuser -l rupxmn18 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN19 Daemon in the Testnet
+testnet19(){
+        echo Starting the Rupaya MN19 Daemon
+	printf "rupxmn19 " && sudo runuser -l rupxmn19 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#
+#Start the Rupaya MN20 Daemon in the Testnet
+testnet20(){
+        echo Starting the Rupaya MN20 Daemon
+	printf "rupxmn20 " && sudo runuser -l rupxmn20 -c 'rupayad -daemon -testnet' && sleep 2
+}
+#---------------------------------------------------------
+#
+#Start all Rupaya Daemons in the Testnet
+testnetall(){
+        echo Starting all Rupaya Daemons in the Testnet
+	testnet1
+	testnet2
+	testnet3
+	testnet4
+	testnet5
+	testnet6
+	testnet7
+	testnet8
+	testnet9
+	testnet10
+	testnet11
+	testnet12
+	testnet13
+	testnet14
+	testnet15
+	testnet16
+	testnet17
+	testnet18
+	testnet19
+	testnet20
+}
+#---------------------------------------------------------
+#
 #Stop the Rupaya MN1 Daemon
 stop1(){
         echo Stopping the Rupaya MN1 Daemon
@@ -991,6 +1137,126 @@ logall(){
         echo ---------------------------------------------------------
 	log20
         echo ---------------------------------------------------------
+}
+#---------------------------------------------------------
+#
+#MN1 - Searching MN1 debug.log for the last 5 entries
+catlog1(){
+	echo Searching MN1 debug.log for the TXHASH
+	cat /home/rupxmn/.rupayacore/debug.log | tail -5
+}
+#
+#MN2 - Searching MN2 debug.log for the last 5 entries
+catlog2(){
+	echo Searching MN2 debug.log for the TXHASH
+	cat /home/rupxmn2/.rupayacore/debug.log | tail -5
+}
+#
+#MN3 - Searching MN3 debug.log for the last 5 entries
+catlog3(){
+	echo Searching MN3 debug.log for the TXHASH
+	cat /home/rupxmn3/.rupayacore/debug.log | tail -5
+}
+#
+#MN4 - Searching MN4 debug.log for the last 5 entries
+catlog4(){
+	echo Searching MN4 debug.log for the TXHASH
+	cat /home/rupxmn4/.rupayacore/debug.log | tail -5
+}
+#
+#MN5 - Searching MN5 debug.log for the last 5 entries
+catlog5(){
+	echo Searching MN5 debug.log for the TXHASH
+	cat /home/rupxmn5/.rupayacore/debug.log | tail -5
+}
+#
+#MN6 - Searching MN6 debug.log for the last 5 entries
+catlog6(){
+	echo Searching MN6 debug.log for the TXHASH
+	cat /home/rupxmn6/.rupayacore/debug.log | tail -5
+}
+#
+#MN7 - Searching MN7 debug.log for the last 5 entries
+catlog7(){
+	echo Searching MN7 debug.log for the TXHASH
+	cat /home/rupxmn7/.rupayacore/debug.log | tail -5
+}
+#
+#MN8 - Searching MN8 debug.log for the last 5 entries
+catlog8(){
+	echo Searching MN8 debug.log for the TXHASH
+	cat /home/rupxmn8/.rupayacore/debug.log | tail -5
+}
+#
+#MN9 - Searching MN9 debug.log for the last 5 entries
+catlog9(){
+	echo Searching MN9 debug.log for the TXHASH
+	cat /home/rupxmn9/.rupayacore/debug.log | tail -5
+}
+#
+#MN10 - Searching MN10 debug.log for the last 5 entries
+catlog10(){
+	echo Searching MN10 debug.log for the TXHASH
+	cat /home/rupxmn10/.rupayacore/debug.log | tail -5
+}
+#MN11 - Searching MN11 debug.log for the last 5 entries
+catlog11(){
+	echo Searching MN11 debug.log for the TXHASH
+	cat /home/rupxmn11/.rupayacore/debug.log | tail -5
+}
+#
+#MN12 - Searching MN12 debug.log for the last 5 entries
+catlog12(){
+	echo Searching MN12 debug.log for the TXHASH
+	cat /home/rupxmn12/.rupayacore/debug.log | tail -5
+}
+#
+#MN13 - Searching MN13 debug.log for the last 5 entries
+catlog13(){
+	echo Searching MN13 debug.log for the TXHASH
+	cat /home/rupxmn13/.rupayacore/debug.log | tail -5
+}
+#
+#MN14 - Searching MN14 debug.log for the last 5 entries
+catlog14(){
+	echo Searching MN14 debug.log for the TXHASH
+	cat /home/rupxmn14/.rupayacore/debug.log | tail -5
+}
+#
+#MN15 - Searching MN15 debug.log for the last 5 entries
+catlog15(){
+	echo Searching MN15 debug.log for the TXHASH
+	cat /home/rupxmn15/.rupayacore/debug.log | tail -5
+}
+#
+#MN16 - Searching MN16 debug.log for the last 5 entries
+catlog16(){
+	echo Searching MN16 debug.log for the TXHASH
+	cat /home/rupxmn16/.rupayacore/debug.log | tail -5
+}
+#
+#MN17 - Searching MN17 debug.log for the last 5 entries
+catlog17(){
+	echo Searching MN17 debug.log for the TXHASH
+	cat /home/rupxmn17/.rupayacore/debug.log | tail -5
+}
+#
+#MN18 - Searching MN18 debug.log for the last 5 entries
+catlog18(){
+	echo Searching MN18 debug.log for the TXHASH
+	cat /home/rupxmn18/.rupayacore/debug.log | tail -5
+}
+#
+#MN19 - Searching MN19 debug.log for the last 5 entries
+catlog19(){
+	echo Searching MN19 debug.log for the TXHASH
+	cat /home/rupxmn19/.rupayacore/debug.log | tail -5
+}
+#
+#MN20 - Searching MN20 debug.log for the last 5 entries
+catlog20(){
+	echo Searching MN20 debug.log for the TXHASH
+	cat /home/rupxmn20/.rupayacore/debug.log | tail -5
 }
 #---------------------------------------------------------
 #
@@ -2710,6 +2976,7 @@ list(){
 	echo ""
 	echo ${bold}bc${normal} - Check the Block Count
 	echo ${bold}bc1${normal} - Check the Block Count of MN1
+	echo ${bold}catlog1${normal} - Search MN1 debug.log for the last 5 entries
 	echo ${bold}checkall${normal} - Run all of the "Check" commands for all MNs	
 	echo ${bold}log1${normal} - Search MN1 debug.log for the TXHASH
 	echo ${bold}logall${normal} - Search all MNs debug.log for the TXHASH
@@ -2722,6 +2989,7 @@ list(){
 	echo ${bold}startall${normal} - Start all Rupaya MN Daemons
 	echo ${bold}stop1${normal} -  Stop the MN1 Rupaya Daemon
 	echo ${bold}stopall${normal} - Stop all Rupaya MN Daemons
+	echo ${bold}testnet1${normal} -  Start the MN1 Rupaya Daemon in the Testnet
 	echo ""
 	echo ${bold}Commands to view/edit/remove/resync the folders and config files${normal}
 	echo ""
