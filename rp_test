@@ -5,7 +5,7 @@ WALLETS=6
 # second arg: command to run
 run_as_rupxmn(){
     if [ "$2" == "rps" ]; then
-        #run the rps method and print results to screen
+        printf "$2" # run the rps method and print results to screen
     else
         if [ "$1" == "all" ]; then
             printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
