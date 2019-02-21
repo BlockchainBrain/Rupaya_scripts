@@ -25,16 +25,24 @@ run_as_rupxmn(){
 }
 
 cat_debuglog(){
-	if [ "$1" == "all" ]; then
-		printf "rupxmn " && sudo cat /home/rupxmn/.rupayacore/debug.log "$2"
-		for i in $(seq 2 $WALLETS); do
-			printf "rupxmn$i " && sudo cat /home/rupxmn$i/.rupayacore/debug.log "$2"
-		done
-	elif [[ "$1" =~ ^[0-9]*$ ]]; then # check if $1 is an integer or nothing
-		printf "rupxmn$1 " && sudo cat /home/rupxmn$i/.rupayacore/debug.log "$2"
-	else
-		echo 'Expected a number or "all" after command name to indicate wallet(s)'
-	fi
+    if [ "$1" == "all" ]; then
+        printf "rupxmn " && sudo cat /home/rupxmn/.rupayacore/debug.log "$2"
+        for i in $(seq 2 $WALLETS); do
+            if [ $i -eq 1 ]; then
+                printf "rupxmn " && sudo cat /home/rupxmn/.rupayacore/debug.log "$2"
+            else
+                printf "rupxmn$i " && cat cat /home/rupxmn$i/.rupayacore/debug.log "$2"
+            fi
+        done
+    elif [[ "$1" =~ ^[0-9]*$ ]]; then # check if $1 is an integer or nothing
+        if [ $1 -eq 1 ]; then
+            printf "rupxmn " && sudo cat /home/rupxmn/.rupayacore/debug.log "$2"
+        else
+            printf "rupxmn$1 " && sudo cat /home/rupxmn$i/.rupayacore/debug.log "$2"
+        fi
+    else
+        echo 'Expected a number or "all" after command name to indicate wallet(s)'
+    fi
 }
 
 rpcli(){
