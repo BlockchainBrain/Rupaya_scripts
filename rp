@@ -4,16 +4,24 @@ WALLETS=6
 # first arg: number or all
 # second arg: command to run
 run_as_rupxmn(){
-	if [ "$1" == "all" ]; then
-		printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
-		for i in $(seq 2 $WALLETS); do
-			printf "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "$2"
-		done
-	elif [[ "$1" =~ ^[0-9]*$ ]]; then # check if $1 is an integer or nothing
-		printf "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "$2"
-	else
-		echo 'Expected a number or "all" after command name to indicate wallet(s)'
-	fi
+    if [ "$1" == "all" ]; then
+        printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
+        for i in $(seq 2 $WALLETS); do
+            if [ $i -eq 1 ]; then
+                printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
+            else
+                printf "rupxmn$i " && sudo runuser -l "rupxmn$i" -c "$2"
+            fi
+        done
+    elif [[ "$1" =~ ^[0-9]*$ ]]; then # check if $1 is an integer or nothing
+        if [ $1 -eq 1 ]; then
+            printf "rupxmn " && sudo runuser -l "rupxmn" -c "$2"
+        else
+            printf "rupxmn$1 " && sudo runuser -l "rupxmn$1" -c "$2"
+        fi
+    else
+        echo 'Expected a number or "all" after command name to indicate wallet(s)'
+    fi
 }
 
 rpcli(){
@@ -37,7 +45,7 @@ resync(){
 	run_as_rupxmn $1 "rupayad -daemon -resync"
 }
 
-ps(){
+rps(){
 	echo Checking to see if the Rupaya Daemon is running
 	ps -ef | grep rupaya
 }
@@ -55,7 +63,7 @@ count(){
 	rpcli $1 "masternode count"
 }
 
-COMMANDS="bc info ps start stop resync status count"
+COMMANDS="bc info rps start stop resync status count"
 
 for c in $COMMANDS; do
 	if [ "$1" == "$c" ]; then
